@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "695f99ec3cbc8b5d1a54",
   "position": {
-    "x": 23.233818963458322,
-    "y": 158.96823501313591,
+    "x": 0,
+    "y": 0,
     "z": 1,
-    "height": 506.25268688798661,
+    "height": 348.50728445187485,
     "width": 300.81681394793407,
     "tabOrder": 1
   },
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'USD'"
+                                "Value": "'AUD'"
                               }
                             }
                           ]
