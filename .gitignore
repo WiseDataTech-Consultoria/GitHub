@@ -1,0 +1,4 @@
+*.pdf
+*.pptx
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
