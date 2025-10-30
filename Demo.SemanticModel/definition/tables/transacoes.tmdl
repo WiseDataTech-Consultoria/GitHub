@@ -1,8 +1,15 @@
 table transacoes
 	lineageTag: 6a4b0493-cbc7-492e-a4e1-d0a6cc51c44a
 
+	measure 'Valor Total' = SUM(transacoes[Total])
+		displayFolder: Medidas
+		lineageTag: c15ce6f7-6e4a-474d-b7db-a010d618e242
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column ID
 		dataType: double
+		displayFolder: Colunas
 		lineageTag: c533ec9a-8d30-4053-8b8c-47de0079197d
 		summarizeBy: count
 		sourceColumn: ID
@@ -14,6 +21,7 @@ table transacoes
 	column Data
 		dataType: dateTime
 		formatString: dd/mm/yyyy
+		displayFolder: Colunas
 		lineageTag: 96c25eb6-8cde-4501-887f-58e644a454e2
 		summarizeBy: none
 		sourceColumn: Data
@@ -26,6 +34,7 @@ table transacoes
 
 	column Total
 		dataType: double
+		displayFolder: Colunas
 		lineageTag: f68d631c-0779-49ad-b583-362626f8e953
 		summarizeBy: sum
 		sourceColumn: Total
@@ -36,6 +45,7 @@ table transacoes
 
 	column Moeda
 		dataType: string
+		displayFolder: Colunas
 		lineageTag: b25c8105-1de5-406d-9a2b-2e82dcd5a002
 		summarizeBy: none
 		sourceColumn: Moeda
