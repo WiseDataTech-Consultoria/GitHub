@@ -1,0 +1,16 @@
+relationship 04551570-a6cc-82cb-9c2a-41c0a24092ae
+	fromColumn: transacoes.Moeda
+	toColumn: moedas.Moeda
+
+relationship cd47b752-8cef-c409-99a9-d206c77e32fe
+	fromColumn: cotacoes.Moeda
+	toColumn: moedas.Moeda
+
+relationship 46792c00-7b32-6767-29e6-b625d6c3556a
+	fromColumn: transacoes.Data
+	toColumn: calendario.Data
+
+relationship f983684b-e01a-cc9d-14ea-71b253418622
+	fromColumn: cotacoes.DataCotacao
+	toColumn: calendario.Data
+

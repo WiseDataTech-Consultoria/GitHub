@@ -1,0 +1,59 @@
+table calendario
+	lineageTag: 4fd7df5a-c3bd-450c-9740-a1a6823d5ec1
+	sourceLineageTag: [dbo].[calendario]
+	dataCategory: Time
+
+	column Data
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 14fb426f-9ce2-47a7-b857-d89bb514db76
+		sourceLineageTag: Data
+		summarizeBy: none
+		sourceColumn: Data
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 11fe105d-f9da-406c-9b66-db33aeef6c63
+		sourceLineageTag: Ano
+		summarizeBy: none
+		sourceColumn: Ano
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column MesAno
+		dataType: string
+		lineageTag: 76814170-cba5-41fc-9982-580fb89ce507
+		sourceLineageTag: MesAno
+		summarizeBy: none
+		sourceColumn: MesAno
+		sortByColumn: MesInicio
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2486cbc-2cb2-4ae2-a93d-83961a6ab38b
+		sourceLineageTag: MesInicio
+		summarizeBy: none
+		sourceColumn: MesInicio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition calendario = entity
+		mode: directLake
+		source
+			entityName: calendario
+			schemaName: dbo
+			expressionSource: 'DirectLake - lake'
+
